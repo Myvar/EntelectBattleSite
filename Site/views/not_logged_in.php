@@ -1,13 +1,27 @@
 <?php include('_header.php'); ?>
 
 
-<h1>Entelect Challenge Battle Site</h1>
+<h1><a href="index.php">Entelect Challenge Battle Site</a></h1>
 		Links:<br>
-		<a href="./BotSetup.php">Set up your bot</a><br>
-		<a href="./MatchDB.php">View all matches ever played</a><br>
-		<a href="./BotSetup.php">Leader bords</a><br>
+		<a href="index.php?p=setup">Set up your bot</a><br>
+		<a href="index.php?p=matchdb">View all matches ever played</a><br>
+		<a href="index.php?p=lb">Leader bords</a><br>
 
 <hr>
+
+<?php 
+if(isset($_GET['p']))
+{
+	include('./pages/' . $_GET['p'] . '.php' );
+	
+}
+else
+{
+	include('./pages/home.php' );
+}
+
+?>
+
 
 <form method="post" action="index.php" name="loginform">
     <label for="user_name"><?php echo WORDING_USERNAME; ?></label>
@@ -21,5 +35,7 @@
 
 <a href="register.php"><?php echo WORDING_REGISTER_NEW_ACCOUNT; ?></a>
 <a href="password_reset.php"><?php echo WORDING_FORGOT_MY_PASSWORD; ?></a>
+
+
 
 <?php include('_footer.php'); ?>

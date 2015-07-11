@@ -143,7 +143,7 @@ class Registration
                 $query_new_user_insert->bindValue(':user_activation_hash', $user_activation_hash, PDO::PARAM_STR);
                 $query_new_user_insert->bindValue(':user_registration_ip', $_SERVER['REMOTE_ADDR'], PDO::PARAM_STR);
                 $query_new_user_insert->execute();
-
+				
                 // id of new user
                 $user_id = $this->db_connection->lastInsertId();
 
