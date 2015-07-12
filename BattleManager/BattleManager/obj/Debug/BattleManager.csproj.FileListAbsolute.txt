@@ -1,1 +1,9 @@
 C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\bin\Debug\BattleManager.exe.config
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.csprojResolveAssemblyReference.cache
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.Form1.resources
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.Properties.Resources.resources
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.csproj.GenerateResource.Cache
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\bin\Debug\BattleManager.exe
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\bin\Debug\BattleManager.pdb
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.exe
+C:\wamp\www\EntelectBattleSite\BattleManager\BattleManager\obj\Debug\BattleManager.pdb
