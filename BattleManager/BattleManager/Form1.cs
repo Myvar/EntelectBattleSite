@@ -14,12 +14,15 @@ namespace BattleManager
         {
             InitializeComponent();
         }
+        public static  int _port = 8080;
 
         public static  List<apicall> calles = new List<apicall>();
 
+        public static string ServerName = "localhost";
+
         public static  List<string> URLS = new List<string>()
         {
-           // "http://localhost:8080/keys/req/"
+            "http://*:" + _port.ToString() + "/"
         };
 
 
@@ -27,11 +30,11 @@ namespace BattleManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            URLS.Clear();
+           /* URLS.Clear();
             foreach(var i in calles)
             {
-                URLS.Add(i.URL);
-            }
+              //  URLS.Add(i.URL);
+            }*/
             ws = new WebServer(SendResponse, URLS.ToArray());
             ws.Run();
             LBL_WEBAPI.Text = "WebAPI: online";
@@ -43,7 +46,7 @@ namespace BattleManager
 
             foreach (apicall i in calles)
             {
-                if(i.URL == request.Url.ToString())
+                if (i.URL.Replace("~", ServerName) == request.Url.ToString().Split('?')[0])
                 {
                     return i.Execute(request);
                 }
@@ -61,6 +64,7 @@ namespace BattleManager
         private void Form1_Load(object sender, EventArgs e)
         {
             calles.Add(new Status());
+            calles.Add(new StartGame());
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

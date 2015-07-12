@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace BattleManager.api.calls
 {
-    public class Status : apicall
+    public class StartGame : apicall
     {
-        public Status()
+        public StartGame()
         {
-            URL = "http://~:8080/api/status/";
+            URL = "http://~:8080/api/startgame/";
         }
 
         public override string Execute(HttpListenerRequest request)
         {
-            return "Good";
+            //we need to do match making here
+            var dat = GetUrlGets(request.RawUrl);
+
+            return "Wait";
         }
     }
 }
