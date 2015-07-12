@@ -10,6 +10,10 @@ namespace BattleManager
 {
     public class WebServer
     {
+
+        
+
+
         private readonly HttpListener _listener = new HttpListener();
         private readonly Func<HttpListenerRequest, string> _responderMethod;
 
